@@ -7,7 +7,7 @@ public class Conta {
 	private TipoConta tipo;
 	private String numero;
 	private String numeroAgencia;
-	public String titular;
+	public Cliente titular;
 	private double saldo;
 	
 	public Conta(String numeroConta) {
