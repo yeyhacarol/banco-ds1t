@@ -1,15 +1,33 @@
 package br.senai.sp.jandira.model;
 
+import br.senai.sp.jandira.lista.TipoConta;
+
 public class Conta {
 	
-	public String tipo;
+	private TipoConta tipo;
 	private String numero;
-	public String numeroAgencia;
+	private String numeroAgencia;
 	public String titular;
 	private double saldo;
 	
 	public Conta(String numeroConta) {
 		numero = numeroConta;
+	}
+	
+	public void setTipo(TipoConta tipo) {
+		this.tipo = tipo;	
+	}
+	
+	public TipoConta getTipo() {
+		return tipo;
+	}
+	
+	public void setNumeroAgencia(String numeroAgencia) {
+		this.numeroAgencia = numeroAgencia;
+	}
+	
+	public String getNumeroAgencia() {
+		return numeroAgencia;
 	}
 	
 	public void depositar(double valorDeposito) {
@@ -47,14 +65,16 @@ public class Conta {
 		
 	}
 	
+	
+	
 	public void exibirDetalhes() {
-		System.out.println();
-		System.out.println("---------------------");
 		System.out.printf("Titular: %s\n", titular);
 		System.out.printf("Número: %s\n", numero);
 		System.out.printf("Agência: %s\n", numeroAgencia);
 		System.out.printf("Tipo: %s\n", tipo);
 		System.out.printf("Saldo: %s\n", saldo);
+		System.out.println();
+		System.out.println("---------------------");
 	}
-	
+	 
 }
