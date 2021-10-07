@@ -23,4 +23,12 @@ public class Cliente {
 		return email;
 	}
 	
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+	
+	public double getSalario(double salario) {
+		return salario;
+	} 
+	
 }
